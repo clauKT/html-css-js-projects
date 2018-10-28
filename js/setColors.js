@@ -11,7 +11,7 @@ var level = document.querySelector("select");
 var container = document.querySelector("#container");
 var generateBtn = document.querySelector("#generate");
 var resetLevel;
-var tries = 0; // no. of tries till guess the color
+var tries = 0; // no. of tries untill user guessed the color
 
 
 
@@ -60,8 +60,7 @@ resetButton.addEventListener("click",function(){
 	//pick new random color
 	lucky.textContent = luckyColor;
 	message.classList.remove("zoom");
-	message.textContent = "";
-	// lucky.style.background = luckyCo lor; 
+	message.textContent = ""; 
 	resetButton.textContent = "New round";
 	// change boxes color
 	for(var i = 0; i < colors.length; i++){
@@ -81,7 +80,6 @@ function guessTheColor(){
 	// math.random() returns a random number in inverval [0,1) 
 	boxes[i].addEventListener("click",function(){
 		tries++; 
-		console.log(this.style.background + " " + luckyColor);
 		if(this.style.background !== luckyColor) // user select wrong color
 		{
 			this.style.background = "black";

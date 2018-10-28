@@ -1,0 +1,2 @@
+log errors
+-> rethink the generate button
